@@ -1,0 +1,20 @@
+[
+  {
+    "id": "transformer_explanation",
+    "category": "technical_explanation",
+    "title": "Transformer Açıklaması",
+    "prompt": "Transformer mimarisini, temel makine öğrenmesi bilgisi olan bir bilgisayar mühendisliği öğrencisine açıkla. Self-attention kavramına mutlaka değin. Cevap en fazla 180 kelime olsun."
+  },
+  {
+    "id": "duplicate_finder",
+    "category": "code_generation",
+    "title": "Python Kod Üretimi",
+    "prompt": "Python'da bir listenin tekrar eden elemanlarını bulan bir fonksiyon yaz. Type hint kullan. Fonksiyonun çalışma mantığını açıkla ve zaman karmaşıklığını belirt."
+  },
+  {
+    "id": "ai_energy_story",
+    "category": "creative_writing",
+    "title": "Yaratıcı Metin",
+    "prompt": "Yapay zekâ tarafından yönetilen gelecekteki bir elektrik şebekesi hakkında tam olarak üç cümlelik kısa bir bilim kurgu hikâyesi yaz."
+  }
+]
