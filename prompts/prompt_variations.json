@@ -1,0 +1,20 @@
+[
+  {
+    "id": "basic_prompt",
+    "level": "basic",
+    "title": "Basit Prompt",
+    "prompt": "LLM'leri anlat."
+  },
+  {
+    "id": "contextual_prompt",
+    "level": "contextual",
+    "title": "Bağlamlı Prompt",
+    "prompt": "LLM'lerin çalışma mantığını, temel makine öğrenmesi bilgisi olan bir bilgisayar mühendisliği öğrencisine açıkla."
+  },
+  {
+    "id": "structured_prompt",
+    "level": "structured",
+    "title": "Yapılandırılmış Prompt",
+    "prompt": "Bir yapay zekâ eğitmeni gibi davran. LLM'lerin çalışma mantığını, temel makine öğrenmesi bilgisi olan bir bilgisayar mühendisliği öğrencisine açıkla. Cevap şu başlıklardan oluşsun: 1. LLM nedir? 2. Tokenization 3. Next-token prediction 4. Transformer ile ilişkisi 5. Basit bir örnek 6. En önemli üç çıkarım. Maksimum 500 kelime kullan. Teknik terimleri ilk kullandığında kısaca tanımla. Kesin olmadığın bir bilgiyi kesinmiş gibi sunma."
+  }
+]

@@ -1,0 +1,67 @@
+{
+  "experiment_name": "Gemini Prompt Comparison",
+  "research_question": "Aynı görev farklı prompt ayrıntı seviyeleriyle verildiğinde model çıktısı nasıl değişir?",
+  "model": "gemini-3.1-flash-lite",
+  "controlled_settings": {
+    "system_instruction": "Teknik konuları doğru ve anlaşılır biçimde açıklayan bir yapay zekâ eğitmenisin. Cevaplarını Türkçe ver ve kullanıcı talimatlarına uy.",
+    "temperature": 1.0,
+    "top_p": 0.9,
+    "seed": 42,
+    "max_output_tokens": 1200
+  },
+  "changed_variable": "prompt",
+  "result_count": 3,
+  "results": [
+    {
+      "experiment": "prompt_comparison",
+      "model": "gemini-3.1-flash-lite",
+      "prompt_id": "basic_prompt",
+      "prompt_level": "basic",
+      "prompt_title": "Basit Prompt",
+      "prompt": "LLM'leri anlat.",
+      "response": "**LLM (Large Language Model - Büyük Dil Modeli)**, temel olarak insan dilini anlama, yorumlama ve üretme yeteneğine sahip, yapay zekâ tabanlı gelişmiş bir yazılım sistemidir.\n\nBu kavramı daha iyi anlamak için bileşenlerine ayırarak inceleyelim:\n\n### 1. İsmi Neden \"Büyük Dil Modeli\"?\n*   **Large (Büyük):** Bu modeller, milyarlarca (hatta trilyonlarca) parametreden oluşur. \"Parametre\", modelin öğrenme sürecinde verilerden çıkardığı kalıpları sakladığı, modelin \"beyin hücreleri\" gibi düşünebileceğimiz ağırlıklardır. Ayrıca, eğitildikleri veri seti (tüm internet, kitaplar, makaleler, kodlar) devasadır.\n*   **Language (Dil):** Temel odak noktası dildir. Ancak bu sadece kelimeler değil; mantık yürütme, programlama kodları, matematiksel problemler ve hatta müzik notaları gibi \"dizi\" halindeki her türlü veridir.\n*   **Model:** Bir verinin bir sonraki adımı ne olacağını tahmin etmek için eğitilmiş bir matematiksel yapıdır.\n\n### 2. LLM'ler Nasıl Çalışır? (Basit Mantık)\nBir LLM'i, **\"gelmiş geçmiş en gelişmiş otomatik tamamlama aracı\"** olarak düşünebilirsin. Çalışma prensibi şöyledir:\n\n*   **İstatistiksel Tahmin:** Bir LLM, kendisine verilen bir cümleyi okur ve \"Bu cümleden sonra gelmesi en muhtemel kelime (veya kelime parçası olan *token*) nedir?\" sorusuna istatistiksel bir yanıt verir.\n*   **Transformer Mimarisi:** Modern LLM'lerin kalbinde 2017 yılında Google tarafından geliştirilen \"Transformer\" adlı mimari yatar. Bu mimarinin en önemli özelliği **\"Dikkat (Attention)\"** mekanizmasıdır. Bu mekanizma, modelin bir cümledeki kelimeler arasındaki ilişkileri anlamasını sağlar. Örneğin; \"Banka\" kelimesi, \"nehir\" kelimesiyle aynı cümledeyse bunun bir finans kurumu değil, bir yer şekli olduğunu \"anlar\".\n*   **Eğitim Süreci:**\n    1.  **Ön Eğitim (Pre-training):** Modele internetteki devasa veriler okunur. Burada dil bilgisi, genel kültür ve mantık yürütme gibi yetenekler kazanır.\n    2.  **İnce Ayar (Fine-tuning):** İnsanlar tarafından verilen geri bildirimlerle (RLHF - İnsan Geri Bildirimli Pekiştirmeli Öğrenme) modelin daha güvenli, yardımcı ve sohbet edebilir olması sağlanır.\n\n### 3. Neler Yapabilirler?\n*   **Metin Üretimi:** Makale yazma, hikaye oluşturma, özetleme.\n*   **Kod Yazımı:** Python, Java, C++ gibi dillerde yazılım geliştirme.\n*   **Çeviri:** Diller arası doğal ve akıcı çeviri.\n*   **Mantık ve Analiz:** Karmaşık bir problemi parçalara bölerek çözme.\n\n### 4. Bilinmesi Gereken Sınırlamalar\nLLM'ler \"düşünen\" varlıklar değildir. Bir LLM ile etkileşime girerken şu iki durumu unutmamak gerekir:\n\n1.  **Halüsinasyon:** Model bazen çok emin bir tavırla yanlış bilgi verebilir. Bunun nedeni, modelin \"gerçekleri\" bilmesi değil, \"gerçek gibi görünen bir metin dizisi\" oluşturmaya çalışmasıdır.\n2.  **Bilinçsizlik:** Modellerin duyguları, inançları veya gerçek bir dünya deneyimleri yoktur. Sadece matematiksel olasılıklar üzerinden sonuç üretirler.\n\n**Özetle:** Bir LLM, insan dilinin yapısını, mantığını ve bilgisini muazzam bir olasılık tablosuna dönüştüren ve bu tabloyu kullanarak size en mantıklı yanıtı veren çok gelişmiş bir hesaplama aracıdır.\n\nKonuyla ilgili daha derinlemesine (örneğin Transformer mimarisi veya tokenizasyon gibi) merak ettiğin bir detay var mı?",
+      "response_character_count": 3206,
+      "elapsed_seconds": 4.368,
+      "settings": {
+        "temperature": 1.0,
+        "top_p": 0.9,
+        "seed": 42,
+        "max_output_tokens": 1200
+      }
+    },
+    {
+      "experiment": "prompt_comparison",
+      "model": "gemini-3.1-flash-lite",
+      "prompt_id": "contextual_prompt",
+      "prompt_level": "contextual",
+      "prompt_title": "Bağlamlı Prompt",
+      "prompt": "LLM'lerin çalışma mantığını, temel makine öğrenmesi bilgisi olan bir bilgisayar mühendisliği öğrencisine açıkla.",
+      "response": "Bir bilgisayar mühendisliği öğrencisi olarak LLM'lerin (Large Language Models) çalışma mantığını, \"olasılıksal bir sonraki token tahmini\" ve \"Transformer mimarisi\" çerçevesinde şu şekilde özetleyebiliriz:\n\n### 1. Temel Felsefe: \"Next Token Prediction\"\nLLM'ler temelde birer **otoregresif dil modelidir**. Yani, verilen bir girdi dizisi ($x_1, x_2, ..., x_t$) için bir sonraki token'ı ($x_{t+1}$) tahmin etmek üzere eğitilmişlerdir. \n\nModelin eğitim süreci (Pre-training), internetten toplanan devasa veriler üzerinde **self-supervised learning** (öz-denetimli öğrenme) ile gerçekleşir. Bir cümledeki kelimeler gizlenir ve modelden bunları tahmin etmesi istenir; tahmin hatası (cross-entropy loss) geri yayılım (backpropagation) ile ağırlıklara işlenir.\n\n### 2. Mimari: Transformer ve Attention Mekanizması\nModern LLM'lerin kalbinde **Transformer** mimarisi yatar. Bu mimariyi özel kılan iki ana bileşen vardır:\n\n*   **Self-Attention (Öz-dikkat):** Geleneksel RNN'lerin aksine, Transformer'lar veriyi sekansiyel değil, paralel işler. Self-attention mekanizması, bir cümledeki her bir token'ın diğer tüm token'larla olan ilişkisini (kontekstsel ağırlığını) hesaplar. \n    *   *Matematiksel olarak:* $Attention(Q, K, V) = \\text{softmax}(\\frac{QK^T}{\\sqrt{d_k}})V$\n    *   Burada Query (sorgu), Key (anahtar) ve Value (değer) matrisleri, token'ların birbirine göre önemini belirler. Bu sayede model, \"banka\" kelimesinin \"para\" ile mi yoksa \"nehir kenarı\" ile mi ilgili olduğunu çevresindeki kelimelere bakarak (long-range dependencies) anlayabilir.\n\n*   **Positional Encoding:** Transformer'ların paralel işleme yapısı gereği dizilim bilgisi (kelimelerin sırası) kaybolur. Bunu telafi etmek için vektörlere konum bilgisi eklenir (sinüs/kosinüs fonksiyonları veya öğrenilebilir matrisler ile).\n\n### 3. Eğitim Aşamaları (Pipeline)\nBir LLM'in bugün karşımıza \"akıllı\" bir asistan olarak çıkması üç ana aşamadan geçer:\n\n1.  **Pre-training:** Devasa veri kümesi üzerinde modelin dilin istatistiksel yapısını, dünya bilgisini ve mantık yürütmeyi öğrenmesi. Bu aşama maliyetli ve uzundur.\n2.  **SFT (Supervised Fine-Tuning):** Modelin bir \"sohbet botu\" gibi davranması için, soru-cevap formatındaki etiketli verilerle eğitilmesi (Instruction Tuning).\n3.  **RLHF (Reinforcement Learning from Human Feedback):** Modelin çıktılarına insanlar tarafından puan verilir. Bu puanlar bir **Reward Model** eğitmek için kullanılır. Ardından PPO (Proximal Policy Optimization) gibi algoritmalarla model, insanların tercih ettiği (daha güvenli, daha doğru) cevapları verecek şekilde optimize edilir.\n\n### 4. Neden LLM \"Düşünüyor\" Gibi Görünüyor?\nBuradaki kritik nokta, **\"Emergent Properties\" (Beliren Özellikler)** kavramıdır. Parametre sayısı (modelin kapasitesi) belirli bir eşiği geçtiğinde, model sadece istatistiksel tahmin yapmanın ötesine geçerek; kod yazma, mantıksal çıkarım (reasoning) ve diller arası çeviri gibi yetenekler kazanmaya başlar.\n\nÖzetle, bir LLM'i; yüksek boyutlu bir vektör uzayında (Embedding space) kelimeler arasındaki karmaşık ilişkileri öğrenmiş ve bunları **Softmax** katmanından geçerek olasılık dağılımlarına dönüştüren, devasa bir **matris çarpım motoru** olarak düşünebilirsin.\n\n**Öğrenci gözüyle not:** Eğer derinlemesine incelemek istersen, *Attention is All You Need* makalesini ve Andrej Karpathy'nin \"Zero to Hero\" serisini mutlaka gözden geçirmelisin. Sorun olursa buradayım!",
+      "response_character_count": 3393,
+      "elapsed_seconds": 4.392,
+      "settings": {
+        "temperature": 1.0,
+        "top_p": 0.9,
+        "seed": 42,
+        "max_output_tokens": 1200
+      }
+    },
+    {
+      "experiment": "prompt_comparison",
+      "model": "gemini-3.1-flash-lite",
+      "prompt_id": "structured_prompt",
+      "prompt_level": "structured",
+      "prompt_title": "Yapılandırılmış Prompt",
+      "prompt": "Bir yapay zekâ eğitmeni gibi davran. LLM'lerin çalışma mantığını, temel makine öğrenmesi bilgisi olan bir bilgisayar mühendisliği öğrencisine açıkla. Cevap şu başlıklardan oluşsun: 1. LLM nedir? 2. Tokenization 3. Next-token prediction 4. Transformer ile ilişkisi 5. Basit bir örnek 6. En önemli üç çıkarım. Maksimum 500 kelime kullan. Teknik terimleri ilk kullandığında kısaca tanımla. Kesin olmadığın bir bilgiyi kesinmiş gibi sunma.",
+      "response": "Merhaba! Bir bilgisayar mühendisliği öğrencisi olarak LLM'lerin (Büyük Dil Modelleri) arkasındaki mimariyi anlaman, üretken yapay zekayı sadece bir araç olarak değil, bir mühendislik disiplini olarak kavramanı sağlayacaktır. İşte temel başlıklarla LLM dünyası:\n\n### 1. LLM Nedir?\nLLM, devasa veri kümeleri üzerinde eğitilmiş, insan dilini anlama, üretme ve manipüle etme yeteneğine sahip, parametre sayısı milyarları bulan derin öğrenme modelleridir. Temelde, bir dizi girdi verisine (input) dayanarak istatistiksel olarak en olası çıktı dizisini tahmin eden \"olasılıksal motorlardır.\"\n\n### 2. Tokenization\nModeller ham metni doğrudan işleyemezler. **Tokenization**, metnin daha küçük birimlere (kelime, alt kelime veya karakter) ayrılması işlemidir. Örneğin, \"bilgisayar\" kelimesi bir token olabilirken, daha karmaşık kelimeler \"bilgi\" ve \"sayar\" gibi parçalara bölünebilir. Bu tokenlar, **Embedding** (bir token'ı yüksek boyutlu bir vektör uzayında sayısal bir diziye dönüştürme) yöntemiyle matematiksel temsilcilerine kavuşur.\n\n### 3. Next-Token Prediction\nLLM'lerin çalışma prensibi özünde bir \"tahmin oyunudur.\" Model, kendisine verilen bir dizi token dizisini (context) analiz ederek, dizinin devamına gelmesi muhtemel bir sonraki token'ı olasılık dağılımı (softmax fonksiyonu ile) üzerinden hesaplar. Seçilen token diziye eklenir ve süreç \"durdurma token'ı\" gelene kadar döngüsel olarak devam eder (Autoregressive generation).\n\n### 4. Transformer ile İlişkisi\nGünümüzdeki LLM'lerin başarısı, 2017'de sunulan **Transformer** mimarisine dayanır. En kritik bileşeni **Self-Attention** (Öz-dikkat) mekanizmasıdır. Bu mekanizma, bir cümledeki her token'ın diğer tüm token'larla ilişkisini hesaplayarak, modelin cümlenin bağlamını (uzak kelimeler arasındaki bağıntıyı bile) kavramasını sağlar. Geleneksel RNN'lerin aksine, veriyi paralel işleyebilmesi büyük veri setlerinde eğitilmeyi mümkün kılar.\n\n### 5. Basit Bir Örnek\n\"Yazılım mühendisi kod...\" cümlesini ele alalım.\n*   **Tokenization:** [Yazılım, mühendisi, kod]\n*   **Embedding:** Bu tokenlar vektör uzayında konumlanır.\n*   **Attention:** \"Kod\" kelimesinin \"yazılım\" ile ilişkisi, \"yazmayı\" kelimesinin gelme olasılığını yükseltir.\n*   **Prediction:** Model, bir sonraki kelime olarak %85 ihtimalle \"yazıyor\", %10 ihtimalle \"derliyor\" gibi bir tahmin yapar ve en yüksek ihtimalli olanı seçer.\n\n### 6. En Önemli Üç Çıkarım\n1.  **Anlam değil İstatistik:** LLM'ler dünyayı insan gibi \"anlamazlar\"; dilin matematiksel ve istatistiksel yapısını kusursuz şekilde modelleyerek tutarlı çıktılar üretirler.\n2.  **Bağlam Penceresi (Context Window):** Modelin tek seferde işleyebileceği token sayısı sınırlıdır; bu, modelin \"hafıza\" kapasitesini belirler.\n3.  **Halüsinasyon Riski:** Olasılıksal yapısı gereği model, yanlış bilgiyi çok ikna edici bir dille sunabilir. Bu yüzden kritik sistemlerde doğrulama (verification) mekanizmaları şarttır.\n\nBu temeller, yapay zeka ile kuracağın mühendislik köprüsünün ilk ayağıdır. Başarılar dilerim!",
+      "response_character_count": 2988,
+      "elapsed_seconds": 3.825,
+      "settings": {
+        "temperature": 1.0,
+        "top_p": 0.9,
+        "seed": 42,
+        "max_output_tokens": 1200
+      }
+    }
+  ]
+}
