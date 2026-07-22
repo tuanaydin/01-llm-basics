@@ -1,0 +1,22 @@
+# Python sanal ortamı
+.venv/
+venv/
+
+# Python önbellek dosyaları
+__pycache__/
+*.py[cod]
+
+# Gizli bilgiler
+.env
+.env.*
+
+# Editör dosyaları
+.vscode/
+.idea/
+
+# İşletim sistemi dosyaları
+.DS_Store
+Thumbs.db
+#API Keyler ve gizli bilgiler için .env dosyalarını yoksay 
+.env
+.env.*
